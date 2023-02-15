@@ -10,9 +10,43 @@
 
 </head>
 <body>
-    <h1>Hello Bootstrap 5</h1>
+    <!-- NavBar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light border border-bottom border-alert">
+        <div class="container">
+            <!-- Brand Logo -->
+            <a href="#" class="navbar-brand">
+                Bootsrap 5 by Ibn
+            </a>
 
+            <!-- Toggle Icon -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
+            <!-- Navbar Links -->
+            <div class="collapse navbar-collapse" id="navMenu">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a href="#" class="nav-link active">Home</a></li>
+                    <li class="nav-item"><a href="#learn" class="nav-link">What you'll learn</a></li>
+                    <li class="nav-item"><a href="#questions" class="nav-link">FAQ</a></li>
+                    <li class="nav-item"><a href="#instructors" class="nav-link">Instructors</a></li>
+                    <li class="nav-item"><a href="#about" class="nav-link">About Us</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <section class="bg-dark p-5 text-center text-sm-start text-light">
+        <div class="container d-lg-flex gap-3 align-items-center justify-content-center">
+            <div>
+                <h3>Become a <span class="text-warning">Web Developer</span></h3>
+                <p class="lead my-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad sit in accusantium, natus possimus totam deleniti quia incidunt, hic ratione, distinctio voluptates velit accusamus at aliquam inventore laudantium qui neque?</p>
+                <button class="btn btn-lg btn-warning">Enroll Now</button>
+            </div>
+            <img class="w-75  mx-auto mt-4 " src="./images/mockup.png" alt="">
+        </div>
+    </section>
     
     <!-- Bootstarp 5 Javascript CDN link -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
