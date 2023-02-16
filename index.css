@@ -3,3 +3,8 @@
         max-width: 50%;
     }
 }
+
+
+.min-w-300 {
+    min-width: 310px;
+}
