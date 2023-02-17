@@ -12,6 +12,9 @@
     <!-- Bootstrap Icons CDN link -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
 
+    <!-- MapBox CDN Link -->
+    <link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.css">
+
 </head>
 <body>
     <!-- NavBar -->
@@ -350,9 +353,53 @@
         </div>
     </section>
 
+    <!-- Contact Info & Map -->
+    <section id="about" class="p-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md">
+                    <h2 class="text-center mb-4">Contact Info.</h2>
+                    <ul class="list-group list-group-flush lead">
+                        <li class="list-group-item">
+                            <span class="fw-bold">Main Location:</span> 5th Avenue Gwarimpa, Abuja.
+                        </li>
+                        <li class="list-group-item">
+                            <span class="fw-bold">Enrollment Phone:</span> +234-903-888-0282
+                        </li>
+                        <li class="list-group-item">
+                            <span class="fw-bold">Enrollment Phone 2:</span> +234-906-720-2841
+                        </li>
+                        <li class="list-group-item">
+                            <span class="fw-bold">Enrollment Email:</span> eduflix@eduflix.com
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md">
+                    <div id="map" class="bg-dark">
+                        <p class="lead text-light text-center pt-5">Error while fetching Map Location...</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
 
 
     <!-- Bootstarp 5 Javascript CDN link -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <!-- MapBox Javascript CDN Link -->
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.js"></script>
+
+    <script>
+        mapboxgl.accessToken = 'pk.eyJ1IjoiYnRyYXZlcnN5IwiYSI6ImNrbmh0dXF1NzBtbnMyb3MzcTBpaG10eXcifQ.h5ZyYCglnMdOLAGGiL1Auw'
+
+        var map = new mapboxgl.Map({
+            container: 'map',
+            style: 'mapbox://styles/mapbox/streets-v11',
+            center: [-71.060982, 42.35725],
+            zoom: 18
+        });
+    </script>
 </body>
 </html>
