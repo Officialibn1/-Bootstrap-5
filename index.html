@@ -50,7 +50,7 @@
                 <div class="text-sm-start">
                     <h3>Become a <span class="text-warning">Web Developer</span></h3>
                     <p class="lead my-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad sit in accusantium, natus possimus totam deleniti quia incidunt, hic ratione, distinctio voluptates velit accusamus at aliquam inventore laudantium qui neque?</p>
-                    <button class="btn btn-lg btn-warning">Enroll Now</button>
+                    <button class="btn btn-lg btn-warning" data-bs-target="#enroll" data-bs-toggle="modal">Enroll Now</button>
                 </div>
                 <img class="w-75 mt-4 " src="./images/mockup.png" alt="">
             </div>
@@ -392,6 +392,68 @@
             </a>
         </div>
     </footer>
+
+    <!-- Modal -->
+    <div class="modal fade" id="enroll">
+        <div class="modal-dialog">
+
+            <!-- Modal Content -->
+            <div class="modal-content">
+
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title" id="enrollLabel">Enrollment</h4>
+                    <button class="btn-close" type="button" data-bs-dismiss="modal"></button>
+                </div>
+
+                <!-- Modal  Body -->
+                <div class="modal-body">
+                    <p class="lead text-center">
+                        Fill out this form and we'll get bact to you
+                    </p>
+                    <form>
+                        <!-- First Name -->
+                        <div class="mb-3">
+                            <label for="first-name" >First Name</label>
+                            <input type="text" class="form-control" id="first-name">
+                        </div>
+
+                        <!-- Last Name -->
+                        <div class="mb-3">
+                            <label for="first-name">Last Name</label>
+                            <input type="text" class="form-control" id="first-name">
+                        </div>
+
+                        <!-- Other Names -->
+                        <div class="mb-3">
+                            <label for="first-name">Other Names</label>
+                            <input type="text" class="form-control" id="first-name">
+                        </div>
+
+                        <!-- Email -->
+                        <div class="mb-4 input-group">
+                            <label for="first-name" class="btn btn-dark px-3">Email</label>
+                            <input type="email" class="form-control" id="first-name">
+                        </div>
+
+                        <!-- Phone -->
+                        <div class="mb-3 input-group">
+                            <label for="first-name" class="btn btn-dark">Phone</label>
+                            <input type="number" class="form-control" id="first-name">
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Modal Footer -->
+                <div class="modal-footer">
+                    <button type="button" data-bs-dismiss="modal" class="btn btn-warning">Dismiss</button>
+                    <button type="submit" data-bs-dismiss="modal" class="btn-success btn">Submit</button>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
 
 
 
