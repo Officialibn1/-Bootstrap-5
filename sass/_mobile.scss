@@ -1,0 +1,10 @@
+@media(max-width: 700px) {
+    .showcase{
+        flex-direction: column-reverse;
+    
+        img{
+            margin: 30px auto;
+        }
+    }
+
+}

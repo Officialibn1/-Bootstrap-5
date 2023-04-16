@@ -1,10 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,400;1,500&display=swap');
 
-$light-color: #f4f4f4;
-
-$dark-color: #162f4c;
-
-$midGray-color: #464646;
+@import 'config';
 
 
 * {
@@ -13,15 +9,97 @@ $midGray-color: #464646;
     box-sizing: border-box;
 }
 
-nav {
-    background-color: $dark-color;
-    height: 60px;
-    display: flex;
-    align-items: center;
-}
 
 body {
     background-color: $light-color;
     font-family: 'Roboto Mono', monospace;
 }
 
+a{
+    text-decoration: none;
+}
+
+nav {
+    background-color: $dark-color;
+    height: 60px;
+    display: flex;
+    align-items: center;
+
+    .logo{
+        font-size: $title-font;
+        color: $light-color;
+        cursor: pointer;
+    }
+
+    ul{
+        list-style: none;
+        display: flex;
+        gap: 2em;
+        margin-left: auto;
+        height: 100%;
+
+        li{
+            height: 100%;
+            display: flex;
+            align-items: center;
+
+            a {
+                text-transform: uppercase;
+                text-decoration: none;
+                color: $light-color;
+            }
+
+            a::after{
+                content: '';
+                height: 3px;
+                width: 0;
+                border-radius: 2px;
+                background-color: $light-color;
+                display: block;
+                margin: auto;
+                transition: .3s ease;
+                -webkit-transition: .3s ease;
+                -moz-transition: .3s ease;
+                -ms-transition: .3s ease;
+                -o-transition: .3s ease;
+                -webkit-border-radius: 2px;
+                -moz-border-radius: 2px;
+                -ms-border-radius: 2px;
+                -o-border-radius: 2px;
+            }
+
+            a:hover:after{
+                width: 100%;
+            }
+        }
+    }
+}
+
+.showcase{
+    @include set-backround($light-color);
+    width: 100%;
+    min-height: calc(100vh - 60px);
+    display: flex;
+    border: 2px solid $dark-color;
+
+    img{
+        width: $seventy-percent;
+        height: $seventy-percent;
+        min-width: 235px;
+    }
+
+    h1 {
+        font-size: $title-font;
+        // color: set-text-color($light-color);
+        margin: 20px 0;
+    }
+
+
+}
+
+
+@import 'button';
+
+@import 'utilities';
+
+@import 'mobile';

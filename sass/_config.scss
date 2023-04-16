@@ -1,0 +1,43 @@
+
+// Color Variables
+
+$light-color: #f4f4f4;
+
+// $light-color: #c8d3d6;
+
+$dark-color: #162f4c;
+
+$midGray-color: #464646;
+
+// Font Size Variables
+
+$title-font: clamp(22px, 3vw, 3em);
+
+
+// Width Percentage Variables
+$fifty-percent: 50%;
+
+$sixty-percent: 60%;
+
+$seventy-percent: 70%;
+
+$eighty-percent: 80%;
+
+// Set text color based on background
+
+@function set-text-color($color) {
+    @if (lightness($color) > 70) {
+        @return $dark-color;
+    } @else {
+        @return #ffff;
+    }
+}
+
+
+// Set background and Text color
+
+@mixin set-backround($color) {
+    background: $color;
+    color: set-text-color($color);
+}
+
